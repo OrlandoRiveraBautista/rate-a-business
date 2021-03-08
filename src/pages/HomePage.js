@@ -31,11 +31,7 @@ function HomePage({ setCurrentLocation, currentLocation }) {
       <Row>
         <SearchOptions />
       </Row>
-      {currentLocation !== null ? <BusinessListing /> : <Loading />}{" "}
-      <Link exact to="/something">
-        <Button type={"primary"}>Send me to BusinessPage</Button>
-      </Link>
-      <Rating />
+      {currentLocation !== null ? <BusinessListing /> : <Loading />} <Rating />
     </Col>
   );
 }

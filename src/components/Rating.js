@@ -24,7 +24,7 @@ export default function Rating({ ratings }) {
           renderStars(value.rating);
         })
       ) : (
-        <h1>something here</h1>
+        <></>
       )}
     </div>
   );

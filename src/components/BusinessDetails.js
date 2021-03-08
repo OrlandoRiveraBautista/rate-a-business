@@ -27,9 +27,10 @@ function BusinessDetails({ business }) {
   const [businessData, setBusinessData] = useState(null);
 
   useEffect(() => {
-    if (!business) return history.push("/");
+    if (!business) return console.log(business);
+    // history.push("/");
     setBusinessData(business);
-  }, []);
+  }, [business]);
 
   const updateRatings = (newRatings) => {
     let total = 0;
@@ -108,6 +109,8 @@ const mapStateToProps = (state, ownProps) => {
   const businessIndex = state.businesses.findIndex(
     (business) => business.reference === reference
   );
+
+  console.log(businessIndex);
 
   return {
     business: state.businesses[businessIndex],
